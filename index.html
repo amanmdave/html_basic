@@ -1,0 +1,90 @@
+<html>
+	<head>
+		<title>TRIP MANAGEMENT</title>
+
+		<!-- The next lines are to import Bootstrap library.
+				For full documentation, visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/
+		-->
+		<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+		<script crossorigin="anonymous"
+				integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+				src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script crossorigin="anonymous"
+				integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+				src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script crossorigin="anonymous"
+				integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+				src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+		<!-- Custom CSS-->
+		<style type="text/css">
+			body, html {
+				height: 100%;
+			}
+
+			.bg {
+				/* The image used */
+				background-image: url("images/background/signin.jpg");
+				/* Full height */
+				height: 100%;
+				/* Center and scale the image nicely */
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+		</style>
+	</head>
+
+
+	<body class="bg">
+		<div style=";padding-top: 50px; padding-bottom: 100px;text-align: center;">
+			<div class="alert alert-info" role="alert" style="height: 60px;font-size: 24px">
+				HOME PAGE
+			</div>
+		</div>
+
+		<div>
+			<div>
+
+				<div style="border: 5px solid black;padding: 25px;background-color: white" class="col-md-6 offset-md-3">
+					<form>
+						<form name="login">
+							<label for="exampleInputEmail1">USERNAME</label>
+							<input aria-describedby="emailHelp" class="form-control" id="email" name="userid"
+								   placeholder="PLEASE ENTER THE USERNAME"  type="email">
+							<br/>
+							<label class="center-block" for="exampleInputPassword1">PASSWORD</label>
+							<input align="middle" class="form-control" id="PASSWORD" name="pswrd"
+								   placeholder="PLEASE ENTER THE PASSWORD" type="password">
+							<br/>
+							<div style="display: flex; align-items: center; justify-content: center; width: 100%">
+								<button class="btn btn-primary" name="customer"
+										onclick="check(this.form)"  type="submit" value="Login">Customer
+									Login
+								</button>
+							</div>
+						</form>
+
+						<!-- The next line of code is written using Javascript
+								It checks our form section and compares it with pre-defined values
+								for userid and password. If it matches, it open a new window in next tab.
+								Else it shows Error.
+						-->
+						<script language="javascript">
+							function check(form) {
+								if (form.userid.value == "user@gmail.com" && form.pswrd.value == "pass") {
+									window.open('views/details.html')
+								} else {
+									alert("Error Password or Username")
+								}
+							}
+						</script>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+
+
+</html>

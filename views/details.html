@@ -1,0 +1,172 @@
+<html>
+
+	<head>
+		<title>TRIP MANAGEMENT</title>
+		<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+		<script crossorigin="anonymous"
+				integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+				src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script crossorigin="anonymous"
+				integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+				src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script crossorigin="anonymous"
+				integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+				src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+		<style type="text/css">
+			body, html {
+				height: 100%;
+			}
+			.bg {
+				/* The image used */
+				background-image: url("../images/background/trip.jpg");
+
+				/* Full height */
+				height: 100%;
+
+				/* Center and scale the image nicely */
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+		</style>
+
+	</head>
+
+
+	<body class="bg">
+		<script language="JavaScript">
+			function showInput() {
+				document.getElementById('display').innerHTML =
+						document.getElementById("user_input").value;
+			}
+		</script>
+
+
+		<div style=";padding-top: 50px; text-align: center;">
+			<div class="alert alert-info" role="alert" style="height: 60px;font-size: 24px">
+
+				<a href="index.html">
+					<button class="btn btn-danger" style="float: left;" type="button">BACK</button>
+				</a>
+				TRANSPORT
+			</div>
+		</div>
+		<div class="row" style="margin: 20px 10px 20px 10px ">
+			<div class="col-md-12" style=" padding-left: 30px;padding-top: 50px;padding-bottom: 50px">
+
+				<form>
+					<div class="input-group flex-nowrap">
+						<div class="input-group-prepend">
+							<button class="btn btn-dark" style="width: 200px" type="button">DESTINATION</button>
+						</div>
+						<input aria-describedby="addon-wrapping" aria-label="DESTINATION" class="form-control" placeholder="PLEASE ENTER THE DESTINATION"
+							   name="message" id="user_input"
+							   type="text">
+					</div>
+				</form>
+
+				<br/>
+
+				<div class="input-group flex-nowrap">
+					<div class="input-group-prepend">
+						<button class="btn btn-dark" style="width: 200px" type="button">DEPARTURE DATE</button>
+					</div>
+					<input aria-describedby="addon-wrapping" aria-label="DEPARTURE DATE" class="form-control"
+						   placeholder="PLEASE ENTER THE DEPARTURE DATE" type="date">
+				</div>
+				<br/>
+
+				<div class="input-group flex-nowrap">
+					<div class="input-group-prepend">
+						<button class="btn btn-dark" style="width: 200px" type="button">ARRIVAL DATE</button>
+					</div>
+					<input aria-describedby="addon-wrapping" aria-label="ARRIVAL DATE" class="form-control"
+						   placeholder="PLEASE ENTER THE ARRIVAL DATE" type="date">
+				</div>
+				<br/>
+
+
+				<div class="input-group flex-nowrap">
+					<div class="input-group-prepend">
+						<button class="btn btn-dark" style="width: 200px" type="button">TRANSPORT</button>
+					</div>
+					<div class="dropdown"> &nbsp;
+						<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle"
+								data-toggle="dropdown" id="dropdownMenuButton" type="button">
+							SELECT MODE OF TRANSPORT
+						</button>
+						<div aria-labelledby="dropdownMenuButton" class="dropdown-menu">
+							<a class="dropdown-item" href="#">BUS &nbsp; &nbsp;&nbsp;&nbsp;<img height="50px" src="../images/icons/bus.png"></a>
+							<a class="dropdown-item" href="#">TRAIN &nbsp;&nbsp; <img height="50px" src="../images/icons/train.png"></a>
+							<a class="dropdown-item" href="#">FLIGHT &nbsp; <img height="45px" src="../images/icons/flight.png"></a>
+						</div>
+					</div>
+				</div>
+				<br/>
+				<br/>
+				<hr/>
+				<br/>
+
+				<div class="input-group flex-nowrap">
+					<div class="input-group-prepend" style="background-color: white; width: 100%; border-radius: 0.25rem">
+						<button class="btn btn-success" style="width: 200px" type="button">PAYMENT MODE</button>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions" type="radio"
+								   value="option1">
+							<label class="form-check-label" for="inlineRadio1">CASH</label>&nbsp;&nbsp;
+							<img height="50px" src="../images/icons/cash.png">
+						</div>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions" type="radio"
+								   value="option2">
+							<label class="form-check-label" for="inlineRadio2">CARD </label>&nbsp;&nbsp;
+							<img height="50px" src="../images/icons/card.png">
+						</div>
+					</div>
+
+				</div>
+				<br/>
+
+
+				<!-- Button trigger modal -->
+				<div class="input-group flex-nowrap">
+					<div class="input-group-prepend">
+						<a >
+							<button class="btn btn-success" data-toggle="modal"  onclick="showInput()" data-target="#exampleModal" style="width: 200px" type="button">MAKE RESERVATION</button>
+						</a>
+					</div>
+				</div>
+
+
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Your Final Receipt</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<strong>Your Destination:</strong> <span id='display'></span> <hr/>
+								Taking other input from the above form and showing its display here is left as an exercise. <br/>
+								Feel free to submit a PR if you could figure it out.
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+
+</html>
